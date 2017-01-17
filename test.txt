@@ -1,1 +1,7 @@
 I can use this to store my python files
+o
+
+
+
+
+this is the first file
