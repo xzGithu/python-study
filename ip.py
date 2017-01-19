@@ -26,7 +26,7 @@ for i in ip:
 
 
     if result==0:
-        cmd1="snmpwalk -v 2c -c public %s sysName.0|awk -F':' {'print $4'}" %i
+        cmd1="snmpwalk -v 2c -c public %s sysName.0|awk -F'' {'print $NF'}" %i
         hostname=subprocess.Popen(cmd1,stdout=subprocess.PIPE,shell=True).communicate()
 
         db = MySQLdb.connect('localhost','root','','cmdb')
